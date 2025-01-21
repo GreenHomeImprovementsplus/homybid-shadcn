@@ -7,14 +7,50 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from '../ui/navigation-menu';
-import ListItem from '../ListItem';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../ui/select';
 
-const MainNavbar = () => {
+const SecondaryNavbar = () => {
   return (
-    <header
-      className='flex justify-end p-4 bg-white shadow-md'
-      style={{ backgroundColor: '#e0e0e0' }}
-    >
+    <header className='flex justify-between p-4 bg-white'>
+      <div className='flex items-center space-x-4'>
+        <p className='font-bold text-2xl'>Auctions</p>
+        <Select>
+          <SelectTrigger className='w-[120px]'>
+            <SelectValue placeholder='Filter 1' />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value='light'>Light</SelectItem>
+            <SelectItem value='dark'>Dark</SelectItem>
+            <SelectItem value='system'>System</SelectItem>
+          </SelectContent>
+        </Select>
+        <Select>
+          <SelectTrigger className='w-[120px]'>
+            <SelectValue placeholder='Filter 2' />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value='light'>Light</SelectItem>
+            <SelectItem value='dark'>Dark</SelectItem>
+            <SelectItem value='system'>System</SelectItem>
+          </SelectContent>
+        </Select>
+        <Select>
+          <SelectTrigger className='w-[120px]'>
+            <SelectValue placeholder='Filter 3' />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value='light'>Light</SelectItem>
+            <SelectItem value='dark'>Dark</SelectItem>
+            <SelectItem value='system'>System</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
       <NavigationMenu>
         <NavigationMenuList className='flex space-x-4'>
           {[
@@ -38,4 +74,4 @@ const MainNavbar = () => {
   );
 };
 
-export default MainNavbar;
+export default SecondaryNavbar;
