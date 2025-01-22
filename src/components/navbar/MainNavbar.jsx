@@ -22,19 +22,24 @@ function MainNavbar() {
         <NavigationMenu>
           <NavigationMenuList className='space-x-6'>
             <NavigationMenuItem>
-              <NavigationMenuLink href='#'>Auctions</NavigationMenuLink>
+              <NavigationMenuLink href='#'>About</NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink href='#'>
+                How It Works
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href='#'>Winners</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href='#'>
-                How does it Work?
-              </NavigationMenuLink>
+              <NavigationMenuLink href='#'>Bidders</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href='#'>Dashboard</NavigationMenuLink>
+              <NavigationMenuLink href='#'>Contractors</NavigationMenuLink>
             </NavigationMenuItem>
+            
+            
           </NavigationMenuList>
         </NavigationMenu>
       </div>

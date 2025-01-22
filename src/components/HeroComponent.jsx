@@ -39,20 +39,6 @@ function HeroComponent() {
           </p>
         </div>
       </div>
-      <div className={cn('text-center', 'p-4')}>
-        <button
-          className={cn(
-            'bg-white',
-            'text-black',
-            'font-bold',
-            'py-2',
-            'px-4',
-            'rounded'
-          )}
-        >
-          Bid Now
-        </button>
-      </div>
     </section>
   );
 }

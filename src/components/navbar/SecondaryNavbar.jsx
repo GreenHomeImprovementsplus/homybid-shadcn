@@ -54,10 +54,10 @@ const SecondaryNavbar = () => {
       <NavigationMenu>
         <NavigationMenuList className='flex space-x-4'>
           {[
-            'Windows/Doors',
             'Home Improvements',
             'Home Services',
-            'Home Stores',
+            'Home Store',
+            'Cars',
             'Subscriptions',
           ].map((item) => (
             <NavigationMenuItem key={item}>
