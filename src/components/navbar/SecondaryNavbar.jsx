@@ -54,7 +54,7 @@ const SecondaryNavbar = () => {
       <NavigationMenu>
         <NavigationMenuList className='flex space-x-4'>
           {[
-            'Windows/Doors',
+            'Windows or Doors',
             'Home Improvements',
             'Home Services',
             'Home Stores',

@@ -33,7 +33,7 @@ function MainNavbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href='#'>Dashboard</NavigationMenuLink>
+              <NavigationMenuLink href='/'>Dashboard</NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
