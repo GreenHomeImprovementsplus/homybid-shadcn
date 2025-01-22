@@ -16,7 +16,7 @@ function HeroComponent() {
         'rounded',
         'overflow-hidden'
       )}
-      style={{ backgroundImage: `url(${Tesla})` }} // Set Tesla image as background
+      style={{ backgroundImage: `url(${Tesla})` }}
     >
       <div
         className={cn(
