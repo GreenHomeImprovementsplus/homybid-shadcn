@@ -8,9 +8,9 @@ const Homepage = () => {
     <>
       <HeroComponent />
       <SecondaryNavbar />
-      <div className='flex flex-row mt-5'>
+      <div className='flex flex-row mt-5 space-x-4'>
         <ProductCard />
-        {/* <OngoingBidCard /> */}
+        <OngoingBidCard />
       </div>
     </>
   );

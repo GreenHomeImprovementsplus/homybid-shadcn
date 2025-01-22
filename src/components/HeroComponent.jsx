@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
+import Tesla from '../assets/tesla.png';
 
 function HeroComponent() {
   return (
@@ -12,10 +13,10 @@ function HeroComponent() {
         'bg-cover',
         'bg-center',
         'bg-no-repeat',
-        'bg-[url("https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ")]',
         'rounded',
         'overflow-hidden'
       )}
+      style={{ backgroundImage: `url(${Tesla})` }} // Set Tesla image as background
     >
       <div
         className={cn(

@@ -10,12 +10,13 @@ import { Button } from './ui/button';
 import { Progress } from './ui/progress';
 import { Separator } from './ui/separator';
 import { Badge } from './ui/badge';
+import Pool from '../assets/pool.png';
 
 const ProductCard = () => {
   return (
     <Card className='w-80 rounded-lg overflow-hidden shadow-md'>
       <img
-        src='https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI'
+        src={Pool}
         alt='Card Image'
         className='object-cover w-full h-48 rounded-t-xl'
       />
@@ -23,7 +24,7 @@ const ProductCard = () => {
       <CardHeader className='pt-2'>
         <Badge
           variant='outline'
-          className='bg-yellow-500 border-yellow-600 w-3/4'
+          className='bg-yellow-500 border-yellow-600 w-max'
         >
           130 Bidders to Start Auction
         </Badge>
@@ -37,8 +38,8 @@ const ProductCard = () => {
       <CardContent>
         <div className='flex flex-col'>
           <div className='flex justify-between'>
-            <span className='text-sm font-semibold'>Current Bids:</span>
-            <span className='text-sm font-semibold'>Required Bids:</span>
+            <span className='text-sm font-semibold'>Current Bids</span>
+            <span className='text-sm font-semibold'>Required Bids</span>
           </div>
           <Progress value={48} />
           <div className='flex justify-between '>

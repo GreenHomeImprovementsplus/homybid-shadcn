@@ -62,7 +62,7 @@ const SecondaryNavbar = () => {
           ].map((item) => (
             <NavigationMenuItem key={item}>
               <NavigationMenuLink
-                href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                href={`${item.toLowerCase().replace(/ /g, '-')}`}
               >
                 {item}
               </NavigationMenuLink>
