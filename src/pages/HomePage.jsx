@@ -3,7 +3,7 @@ import SecondaryNavbar from '@/components/navbar/SecondaryNavbar';
 import OngoingBidCard from '@/components/OngoingBidCard';
 import ProductCard from '@/components/ProductCard';
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
       <HeroComponent />
@@ -15,4 +15,4 @@ const Homepage = () => {
     </>
   );
 };
-export default Homepage;
+export default HomePage;

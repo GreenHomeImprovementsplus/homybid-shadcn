@@ -33,8 +33,8 @@ const OngoingBidCard = () => {
             variant='outline'
             className='bg-gray-200 border-gray-300 w-fit'
           >
-            <Timer size={20} />
-            00:00:00
+            <Timer size={18} />
+            00:56:00
           </Badge>
         </div>
         <div className='flex justify-between items-center w-full'>
