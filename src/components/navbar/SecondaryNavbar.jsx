@@ -30,26 +30,6 @@ const SecondaryNavbar = () => {
             <SelectItem value='system'>System</SelectItem>
           </SelectContent>
         </Select>
-        <Select>
-          <SelectTrigger className='w-[120px]'>
-            <SelectValue placeholder='Filter 2' />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value='light'>Light</SelectItem>
-            <SelectItem value='dark'>Dark</SelectItem>
-            <SelectItem value='system'>System</SelectItem>
-          </SelectContent>
-        </Select>
-        <Select>
-          <SelectTrigger className='w-[120px]'>
-            <SelectValue placeholder='Filter 3' />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value='light'>Light</SelectItem>
-            <SelectItem value='dark'>Dark</SelectItem>
-            <SelectItem value='system'>System</SelectItem>
-          </SelectContent>
-        </Select>
       </div>
       <NavigationMenu>
         <NavigationMenuList className='flex space-x-4'>

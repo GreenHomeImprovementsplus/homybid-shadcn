@@ -25,9 +25,7 @@ function MainNavbar() {
               <NavigationMenuLink href='#'>About</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href='#'>
-                How It Works
-              </NavigationMenuLink>
+              <NavigationMenuLink href='#'>How It Works</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href='#'>Winners</NavigationMenuLink>
@@ -36,10 +34,8 @@ function MainNavbar() {
               <NavigationMenuLink href='#'>Bidders</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href='#'>Contractors</NavigationMenuLink>
+              <NavigationMenuLink href='/'>Contractors</NavigationMenuLink>
             </NavigationMenuItem>
-            
-            
           </NavigationMenuList>
         </NavigationMenu>
       </div>
