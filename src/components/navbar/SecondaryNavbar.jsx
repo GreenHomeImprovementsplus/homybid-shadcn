@@ -31,7 +31,7 @@ const SecondaryNavbar = () => {
           </SelectContent>
         </Select>
       </div>
-      <NavigationMenu>
+      <NavigationMenu className='hidden lg:block'>
         <NavigationMenuList className='flex space-x-4'>
           {[
             'Home Improvements',
