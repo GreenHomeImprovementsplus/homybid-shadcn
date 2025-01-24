@@ -148,7 +148,7 @@ const MainNavbar = () => {
               href='/about'
               className='block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50'
             >
-              Aboutt
+              About
             </Link>
             <Link
               href='/how-it-works'
