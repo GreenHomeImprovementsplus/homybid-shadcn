@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, ChevronLeft } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
 import {
   NavigationMenu,
   NavigationMenuTrigger,
@@ -10,6 +9,8 @@ import {
   NavigationMenuList,
   NavigationMenuItem,
 } from '@/components/ui/navigation-menu';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 
 const MainNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,7 +118,7 @@ const MainNavbar = () => {
           </div>
           <div className='hidden lg:flex lg:items-center lg:justify-end lg:flex-1 lg:space-x-4'>
             <div className='relative'>
-              <input
+              <Input
                 type='text'
                 placeholder='Search Auctions'
                 className='w-64 px-4 py-2 border border-gray-300 rounded-md'
