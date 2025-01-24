@@ -7,13 +7,13 @@ import ProductDetails from '@/components/ProductDetails';
 const HomePage = () => {
   return (
     <>
-      <ProductDetails />
-      {/* <HeroComponent />
+      {/* <ProductDetails /> */}
+      <HeroComponent />
       <SecondaryNavbar />
       <div className='flex flex-row mt-5 space-x-4'>
         <ProductCard />
         <OngoingBidCard />
-      </div> */}
+      </div>
     </>
   );
 };
