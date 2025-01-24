@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
 import {
   NavigationMenu,
   NavigationMenuTrigger,
@@ -118,7 +117,7 @@ const MainNavbar = () => {
           </div>
           <div className='hidden lg:flex lg:items-center lg:justify-end lg:flex-1 lg:space-x-4'>
             <div className='relative'>
-              <Input
+              <input
                 type='text'
                 placeholder='Search Auctions'
                 className='w-64 px-4 py-2 border border-gray-300 rounded-md'
