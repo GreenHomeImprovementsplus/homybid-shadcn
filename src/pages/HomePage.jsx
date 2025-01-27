@@ -1,9 +1,9 @@
-import HeroComponent from '@/components/HeroComponent';
-import SecondaryNavbar from '@/components/navbar/SecondaryNavbar';
-import OngoingBidCard from '@/components/OngoingBidCard';
-import ProductCard from '@/components/ProductCard';
-import ProductDetails from '@/components/ProductDetails';
-import ProductImage from '@/components/ProductImage';
+import HeroComponent from "@/components/HeroComponent";
+import SecondaryNavbar from "@/components/navbar/SecondaryNavbar";
+import OngoingBidCard from "@/components/OngoingBidCard";
+import ProductCard from "@/components/ProductCard";
+import ProductDetails from "@/components/ProductDetails";
+import ProductImage from "@/components/ProductImage";
 
 const HomePage = () => {
   return (
@@ -19,4 +19,5 @@ const HomePage = () => {
     </>
   );
 };
+
 export default HomePage;
