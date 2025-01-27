@@ -1,6 +1,6 @@
 import Navbar from './components/navbar/Navbar';
 import HomePage from './pages/HomePage';
-import LoginPage from "@/pages/loginPage/index.jsx";
+import LoginPage from "@/pages/loginPage";
 
 function App() {
     return (
