@@ -2,7 +2,7 @@ import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Clock, DollarSign } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 const ProductDetails = () => {
   return (
@@ -27,7 +27,6 @@ const ProductDetails = () => {
             </div>
             <div className='flex space-x-2'>
               <Button variant='outline' className='border-black rounded'>
-                <DollarSign className='h-4 w-4 mr-2' />
                 Buy Now $12,500
               </Button>
               <Button variant='outline' className='bg-black text-white rounded'>

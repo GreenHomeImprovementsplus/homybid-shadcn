@@ -1,16 +1,13 @@
-import Navbar from './components/navbar/Navbar';
-import HomePage from './pages/HomePage';
-import LoginPage from "@/pages/loginPage";
 
-function App() {
-    return (
-        <>
-            {/*<Navbar/>*/}
-            <main className='h-screen '>
-                <LoginPage/>
-            </main>
-        </>
-    );
-}
+import Layout from './layouts/client';
+import Router from './routes';
+
+const App = () => {
+  return (
+    <Layout>
+      <Router />
+    </Layout>
+  );
+};
 
 export default App;
