@@ -8,14 +8,14 @@ import ProductImage from '@/components/ProductImage';
 const HomePage = () => {
   return (
     <>
-      <ProductImage />
+      {/* <ProductImage /> */}
       {/* <ProductDetails /> */}
-      {/* <HeroComponent />
+      <HeroComponent />
       <SecondaryNavbar />
       <div className='flex flex-row mt-5 space-x-4'>
         <ProductCard />
         <OngoingBidCard />
-      </div> */}
+      </div>
     </>
   );
 };

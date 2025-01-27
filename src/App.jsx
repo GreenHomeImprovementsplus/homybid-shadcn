@@ -1,15 +1,12 @@
-import Navbar from './components/navbar/Navbar';
-import HomePage from './pages/HomePage';
+import Layout from './layouts/client';
+import Router from './routes';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Navbar />
-      <main className='p-4'>
-        <HomePage />
-      </main>
-    </>
+    <Layout>
+      <Router />
+    </Layout>
   );
-}
+};
 
 export default App;
