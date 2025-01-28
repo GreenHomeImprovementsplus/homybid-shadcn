@@ -9,7 +9,7 @@ const MobileHeader = ({ isOpen, toggleMenu }) => {
       <div className='flex items-center h-16 px-4 sm:px-6'>
         <Button
           onClick={toggleMenu}
-          className='p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset'
+          className='p-2 rounded-md bg-transparent text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset'
         >
           {isOpen ? (
             <X className='block h-6 w-6' />
