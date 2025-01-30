@@ -1,4 +1,3 @@
-// src/layouts/client/index.jsx
 import Header from './header';
 import Footer from './footer/Footer';
 
