@@ -1,7 +1,6 @@
-// src/layouts/client/index.jsx
-import Header from "./header";
-import Footer from "./footer/Footer";
-import { Outlet } from "react-router-dom";
+import Header from './header';
+import Footer from './footer/Footer';
+import { Outlet } from 'react-router-dom';
 
 const ClientLayout = () => {
   return (

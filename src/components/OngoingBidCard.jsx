@@ -1,77 +1,81 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Timer, Users } from 'lucide-react';
-import { Button } from './ui/button';
-import { Progress } from './ui/progress';
-import { Separator } from './ui/separator';
-import { Badge } from './ui/badge';
-import Pool from '../assets/pool.png';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
+import { Separator } from '@/components/ui/separator';
+import { Users, Timer } from 'lucide-react';
+import { useCountdownTimer } from '@/api/useCountdownTimer';
 
-const OngoingBidCard = () => {
+export default function OngoingBidCard({
+  initialTime,
+  itemName,
+  image,
+  itemId,
+  lastBid,
+  bidTotal,
+  lastBidder,
+}) {
+  const { formattedTime } = useCountdownTimer(initialTime);
+
   return (
-    <Card className='w-80 rounded-lg overflow-hidden shadow-md'>
+    <Card className='w-full overflow-hidden'>
       <img
-        src={Pool}
-        alt='Card Image'
-        className='object-cover w-full h-48 rounded-t-xl'
+        src={image}
+        alt={itemName}
+        className='w-full h-[200px] object-cover'
       />
-
-      <CardHeader className='pt-2 flex justify-between'>
-        <div className='flex justify-between'>
-          <Badge
-            variant='outline'
-            className='bg-red-500 border-red-600 w-fit mr-2 text-white'
-          >
+      <CardContent className='p-4 space-y-3'>
+        <div className='pb-1 flex justify-between items-center'>
+          <Badge className='bg-red-500 border-red-600 text-white font-semibold hover:bg-red-500 flex items-center gap-2'>
+            <span className='w-2 h-2 bg-white rounded-full animate-pulse'></span>
             Live Auction
           </Badge>
-          <Badge
-            variant='outline'
-            className='bg-gray-200 border-gray-300 w-fit'
-          >
-            <Timer size={18} />
-            00:56:00
-          </Badge>
-        </div>
-        <div className='flex justify-between items-center w-full'>
-          <CardTitle className='text-lg flex-grow mb-1'>
-            $25k Swimming Pool
-          </CardTitle>
-          <span className='text-sm text-gray-600'>ID: #5829</span>
-        </div>
-      </CardHeader>
-
-      <CardContent>
-        <div className='flex flex-col'>
-          <div className='flex justify-between'>
-            <span className='text-sm font-semibold'>Last Bid</span>
-            <span className='text-sm font-semibold'>Bid Total</span>
+          <div className='bg-gray-200 border border-gray-300 rounded-full px-3 py-1 flex items-center gap-2 text-sm'>
+            <Timer size={16} />
+            <span>{formattedTime}</span>
           </div>
-          <Progress value={48} />
-          <div className='flex justify-between '>
-            <p className='text-sm'>$50</p>
-            <p className='text-sm'>$5,050</p>
+        </div>
+        <div className='space-y-3'>
+          <div className='flex justify-between items-center'>
+            <h3 className='text-lg font-semibold'>{itemName}</h3>
+            <span className='text-sm text-muted-foreground'>ID: {itemId}</span>
           </div>
-          <div className='mt-4 p-4 border bg-gray-300 rounded-lg'>
-            <div className='flex items-center justify-between'>
-              <Users className='text-gray-600 mr-1' size={20} />
-              <p className='text-sm font-semibold mr-auto'>Bob bid $50</p>
-              <p className='text-sm font-thin'>10 mins ago</p>
+          <div className='space-y-1'>
+            <div className='flex justify-between items-center text-xs text-muted-foreground'>
+              <span>Last Bid</span>
+              <span>Bid Total</span>
+            </div>
+            <Progress value={(lastBid / bidTotal) * 100} className='h-2' />
+            <div className='flex justify-between items-center text-sm font-medium'>
+              <span>${lastBid}</span>
+              <span>${bidTotal}</span>
             </div>
           </div>
-          <Separator className='my-4 bg-gray-300 border-gray-600' />
-          <div className='flex flex-col gap-y-2'>
-            <Button className='bg-black text-white'>Bid Now</Button>
-            <Button variant='outline'>BUY IT NOW FOR $12,500</Button>
+          <div className='bg-gray-300 rounded-md p-2 flex justify-between items-center text-sm'>
+            <div className='flex items-center gap-2'>
+              <Users size={16} />
+              <span className='truncate'>
+                {lastBidder} bid ${lastBid}
+              </span>
+            </div>
+            <span className='text-muted-foreground whitespace-nowrap'>
+              2mins ago
+            </span>
           </div>
         </div>
       </CardContent>
+      <Separator className='mx-4' />
+      <CardFooter className='p-4 flex flex-col gap-2'>
+        <Button className='w-full bg-black hover:bg-gray-800 text-white'>
+          Place Bid
+        </Button>
+        <Button
+          variant='outline'
+          className='w-full border-black text-black hover:bg-gray-100'
+        >
+          BUY IT NOW FOR ${bidTotal * 2}
+        </Button>
+      </CardFooter>
     </Card>
   );
-};
-
-export default OngoingBidCard;
+}

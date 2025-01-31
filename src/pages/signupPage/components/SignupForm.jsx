@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import googleIcon from "@/assets/google-icon.png";
 
 export default function SignupForm() {
   const [isTyping, setIsTyping] = useState(false);
@@ -49,8 +50,8 @@ export default function SignupForm() {
               isTyping ? "w-0 opacity-0" : "w-1/2 opacity-100"
             }`}
           />
-          <div className="w-[400px] p-8 flex-shrink-0">
-            <div className="space-y-6">
+          <div className="w-[400px] px-4 py-8 flex-shrink-0">
+            <div className="space-y-4">
               <div className="flex flex-col items-center space-y-3">
                 <div className="w-12 h-12 bg-gray-100 rounded-xl" />
                 <h1 className="text-xl font-semibold">Create your account</h1>
@@ -60,15 +61,11 @@ export default function SignupForm() {
               </div>
 
               <Button
-                variant="outline"
-                className="w-full h-11 flex items-center justify-center gap-3 text-base font-normal"
+                variant={"outline"}
+                className="h-9 rounded-lg shadow-sm border w-full flex items-center justify-center gap-3 text-base font-normal"
               >
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6czjFXezgNQX8yMh0roFs8ZSi8lD0N.png"
-                  alt="Google"
-                  className="w-5 h-5"
-                />
-                Google
+                <img src={googleIcon} alt="Google" className="size-4" />
+                <span className={"text-sm font-medium text-sl"}>Google</span>
               </Button>
 
               <div className="relative flex items-center justify-center">
@@ -90,7 +87,7 @@ export default function SignupForm() {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="h-11"
+                      className="h-9 rounded-lg"
                     />
                   </div>
                   <div className="flex-1 space-y-1.5">
@@ -103,7 +100,7 @@ export default function SignupForm() {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="h-11"
+                      className="h-9 rounded-lg"
                     />
                   </div>
                 </div>
@@ -119,7 +116,7 @@ export default function SignupForm() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="h-11"
+                    className="h-9 rounded-lg"
                   />
                 </div>
 
@@ -135,7 +132,7 @@ export default function SignupForm() {
                       value={formData.password}
                       onChange={handleInputChange}
                       required
-                      className="h-11 pr-10"
+                      className="h-9 rounded-lg pr-10"
                     />
                     <button
                       type="button"
@@ -160,7 +157,7 @@ export default function SignupForm() {
 
                 <Button
                   type="submit"
-                  className="w-full h-11 bg-[#14162E] hover:bg-[#14162E]/90 text-base font-medium"
+                  className="h-9 w-full rounded-lg text-sm bg-gradient-to-r from-[#020817] to-[#334155]"
                 >
                   Continue
                 </Button>

@@ -25,9 +25,9 @@ const SecondaryNavbar = () => {
             <SelectValue placeholder='Filter 1' />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value='light'>Light</SelectItem>
-            <SelectItem value='dark'>Dark</SelectItem>
-            <SelectItem value='system'>System</SelectItem>
+            <SelectItem value='light'>Initial Bidding </SelectItem>
+            <SelectItem value='dark'>Bidding Now</SelectItem>
+            <SelectItem value='system'>Bidding Closed</SelectItem>
           </SelectContent>
         </Select>
       </div>

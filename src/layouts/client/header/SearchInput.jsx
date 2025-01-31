@@ -32,7 +32,7 @@ const SearchInput = ({ isMobile = false }) => {
             <div className='flex items-center p-4 h-16'>
               <Button
                 onClick={() => setIsSearchOpen(false)}
-                className='p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset transition duration-300 ease-in-out'
+                className='p-2 rounded-md text-gray-400 bg-transparent hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset transition duration-300 ease-in-out'
               >
                 <ChevronLeft className='h-6 w-6' />
               </Button>
