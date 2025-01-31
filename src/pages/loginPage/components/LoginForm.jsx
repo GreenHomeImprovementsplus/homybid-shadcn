@@ -5,23 +5,50 @@ import { ChevronRight, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import googleIcon from "@/assets/google-icon.png";
+import { cn } from "@/lib/utils";
+
+const emailSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+});
+
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+});
 
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isEmailEntered, setIsEmailEntered] = useState(false);
 
-  const handleEmailSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      setIsEmailEntered(true);
-    }
+  const emailForm = useForm({
+    resolver: zodResolver(emailSchema),
+    defaultValues: { email: "" },
+  });
+
+  const loginForm = useForm({
+    resolver: zodResolver(loginSchema),
+    defaultValues: { email: "", password: "" },
+  });
+
+  const onEmailSubmit = (data) => {
+    setIsEmailEntered(true);
+    loginForm.setValue("email", data.email);
   };
 
-  const handleLoginSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here
+  const onLoginSubmit = (data) => {
+    console.log(data);
   };
 
   return (
@@ -54,85 +81,114 @@ export default function LoginForm() {
           </div>
 
           {!isEmailEntered ? (
-            <form onSubmit={handleEmailSubmit} className="space-y-6">
-              <div className="space-y-1.5">
-                <label className="text-sm font-medium" htmlFor="email">
-                  Email address
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="h-9 rounded-lg"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full h-9 rounded-lg text-sm transition-all duration-300 bg-gradient-to-r from-[#020817] to-[#334155] hover:from-[#020817] hover:to-[#020817]"
+            <Form {...emailForm}>
+              <form
+                noValidate
+                onSubmit={emailForm.handleSubmit(onEmailSubmit)}
+                className="space-y-6"
               >
-                <span className="text-sm font-normal">Continue</span>
-                <ChevronRight />
-              </Button>
-            </form>
+                <FormField
+                  control={emailForm.control}
+                  name="email"
+                  render={({ field, fieldState }) => (
+                    <FormItem>
+                      <FormLabel>Email address</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="email"
+                          className={cn(
+                            "h-9 rounded-lg",
+                            fieldState.error &&
+                              "border-red-500 focus-visible:ring-red-500"
+                          )}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-xs" />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  className="w-full h-9 rounded-lg text-sm transition-all duration-300 bg-gradient-to-r from-[#020817] to-[#334155] hover:from-[#020817] hover:to-[#020817]"
+                >
+                  <span className="text-sm font-normal">Continue</span>
+                  <ChevronRight />
+                </Button>
+              </form>
+            </Form>
           ) : (
-            <form onSubmit={handleLoginSubmit} className="space-y-4">
-              <div className="space-y-1.5">
-                <label className="text-sm font-medium" htmlFor="email">
-                  Email address
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="h-9 rounded-lg"
-                />
-              </div>
-              <div className="space-y-1.5">
-                <label className="text-sm font-medium" htmlFor="password">
-                  Password
-                </label>
-                <div className="relative">
-                  <Input
-                    id="password"
-                    type={showPassword ? "text" : "password"}
-                    required
-                    className="h-9 rounded-lg"
-                  />
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="icon"
-                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                    onClick={() => setShowPassword(!showPassword)}
-                    aria-label={
-                      showPassword ? "Hide password" : "Show password"
-                    }
-                  >
-                    {showPassword ? (
-                      <EyeOff
-                        className="h-4 w-4 text-gray-500"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <Eye
-                        className="h-4 w-4 text-gray-500"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </Button>
-                </div>
-              </div>
-              <Button
-                type="submit"
-                className="h-9 w-full rounded-lg text-sm bg-gradient-to-r from-[#020817] to-[#334155]"
+            <Form {...loginForm}>
+              <form
+                noValidate
+                onSubmit={loginForm.handleSubmit(onLoginSubmit)}
+                className="space-y-4"
               >
-                Log in
-              </Button>
-            </form>
+                <FormField
+                  control={loginForm.control}
+                  name="email"
+                  render={({ field, fieldState }) => (
+                    <FormItem>
+                      <FormLabel>Email address</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="email"
+                          className={cn(
+                            "h-9 rounded-lg",
+                            fieldState.error &&
+                              "border-red-500 focus-visible:ring-red-500"
+                          )}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-xs" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={loginForm.control}
+                  name="password"
+                  render={({ field, fieldState }) => (
+                    <FormItem>
+                      <FormLabel>Password</FormLabel>
+                      <FormControl>
+                        <div className="relative">
+                          <Input
+                            {...field}
+                            type={showPassword ? "text" : "password"}
+                            className={cn(
+                              "h-9 rounded-lg",
+                              fieldState.error &&
+                                "border-red-500 focus-visible:ring-red-500"
+                            )}
+                          />
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="icon"
+                            className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                            onClick={() => setShowPassword(!showPassword)}
+                          >
+                            {showPassword ? (
+                              <EyeOff className="h-4 w-4 text-gray-500" />
+                            ) : (
+                              <Eye className="h-4 w-4 text-gray-500" />
+                            )}
+                          </Button>
+                        </div>
+                      </FormControl>
+                      <FormMessage className="text-xs" />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  className="h-9 w-full rounded-lg text-sm bg-gradient-to-r from-[#020817] to-[#334155]"
+                >
+                  Log in
+                </Button>
+              </form>
+            </Form>
           )}
         </div>
       </Card>
