@@ -11,7 +11,7 @@ const HomePage = () => {
     <>
       {/* <ProductImage /> */}
       {/* <ProductDetails /> */}
-      <HeroComponent />
+      {/* <HeroComponent />
       <SecondaryNavbar />
       {/* <ProductCard /> */}
       <div className='flex flex-wrap justify-center gap-4'>

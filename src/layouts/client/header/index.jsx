@@ -1,7 +1,7 @@
-import MobileHeader from './MobileHeader';
-import DesktopHeader from './DesktopHeader';
-import MobileMenu from './MobileMenu';
-import { useState } from 'react';
+import MobileHeader from "./MobileHeader";
+import DesktopHeader from "./DesktopHeader";
+import MobileMenu from "./MobileMenu";
+import { useState } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

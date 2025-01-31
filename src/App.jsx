@@ -1,13 +1,8 @@
-
-import Layout from './layouts/client';
-import Router from './routes';
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
 
 const App = () => {
-  return (
-    <Layout>
-      <Router />
-    </Layout>
-  );
+  return <RouterProvider router={routes} />;
 };
 
 export default App;
