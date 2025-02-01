@@ -138,7 +138,7 @@ function Installation() {
       <p>
         Our professional team ensures a smooth and efficient installation
         process, typically completed within 2-4 weeks, depending on your
-        location and specific site conditions.
+        location and specific site conditions
       </p>
     </div>
   );

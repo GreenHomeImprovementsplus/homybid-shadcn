@@ -29,6 +29,7 @@ const ProductImage = () => {
         </div>
       </div>
       <ProductDetails />
+      <div></div>
     </>
   );
 };

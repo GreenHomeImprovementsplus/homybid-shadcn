@@ -13,6 +13,7 @@ const HomePage = () => {
       {/* <ProductDetails /> */}
       <HeroComponent />
       <SecondaryNavbar />
+      {/* <div className='flex flex-row mt-5 space-x-4'> */}
       {/* <ProductCard /> */}
       <div className='flex flex-wrap justify-center gap-4'>
         {auctionItems.map((item) => (
