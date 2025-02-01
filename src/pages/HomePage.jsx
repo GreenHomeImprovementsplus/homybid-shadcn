@@ -11,7 +11,7 @@ const HomePage = () => {
     <>
       {/* <ProductImage /> */}
       {/* <ProductDetails /> */}
-      <HeroComponent />
+      {/* <HeroComponent />
       <SecondaryNavbar />
       {/* <div className='flex flex-row mt-5 space-x-4'> */}
       {/* <ProductCard /> */}
