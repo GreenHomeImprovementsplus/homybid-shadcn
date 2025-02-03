@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 const ClientLayout = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Outlet />
       <Footer />
     </>
