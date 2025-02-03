@@ -1,5 +1,5 @@
-import AboutPage from "@/pages/aboutPage";
-import HomePage from "@/pages/homePage";
+import AboutPage from "@/pages/AboutPage";
+import HomePage from "@/pages/HomePage";
 import { createBrowserRouter } from "react-router-dom";
 import PublicRoute from "./components/PublicRoute";
 import ClientLayout from "@/layouts/client";
