@@ -1,36 +1,8 @@
-# Homybid Shadcn
+# React + Vite
 
-## Description
-Homybid Shadcn is a project aimed at [briefly describe the purpose of your project].
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Installation
-To install the project, follow these steps:
+Currently, two official plugins are available:
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/homybid-shadcn.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd homybid-shadcn
-    ```
-3. Install the dependencies:
-    ```bash
-    npm install
-    ```
-
-## Usage
-To start the project, run:
-```bash
-npm start
-```
-For detailed usage instructions, refer to the [documentation](link-to-documentation).
-
-## Contributing
-Contributions are welcome! Please read the [contributing guidelines](link-to-contributing-guidelines) first.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](link-to-license) file for details.
-
-## Contact
-For any inquiries, please contact [Your Name] at [your-email@example.com].
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
