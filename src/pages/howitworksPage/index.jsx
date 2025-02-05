@@ -1,4 +1,4 @@
-import HowItWorks from '@/components/how-it-works/HowitWorks';
+import HowItWorks from '@/components/how-it-works/HowItWorks';
 import SideNav from '@/components/how-it-works/SideNav';
 import { useState, useEffect } from 'react';
 
