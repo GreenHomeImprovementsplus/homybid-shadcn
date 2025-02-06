@@ -6,6 +6,7 @@ import ClientLayout from '@/layouts/client';
 import LoginPage from '@/pages/loginPage';
 import SignnupPage from '@/pages/signupPage';
 import HowItWorksPage from '@/pages/howitworksPage';
+import NotFound from '@/pages/404Page';
 
 export const routes = createBrowserRouter([
   {
@@ -19,5 +20,5 @@ export const routes = createBrowserRouter([
   },
   { path: '/login', element: <PublicRoute element={LoginPage} /> },
   { path: '/signup', element: <PublicRoute element={SignnupPage} /> },
-  { path: '*', element: <h1>404</h1> },
+  { path: '*', element: <NotFound /> },
 ]);
