@@ -88,6 +88,7 @@ export default function SignupForm() {
                   noValidate
                   onSubmit={form.handleSubmit(onSubmit)}
                   className='space-y-4'
+                  onFocus={() => setIsTyping(true)}
                 >
                   <div className='flex gap-4'>
                     <FormField
