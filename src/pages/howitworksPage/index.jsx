@@ -38,7 +38,7 @@ const HowItWorksPage = () => {
   };
 
   return (
-    <div className='flex min-h-screen flex-col lg:flex-row'>
+    <div className='flex min-h-screen flex-col lg:flex-row container mx-auto'>
       <SideNav
         activeSection={activeSection}
         scrollToSection={scrollToSection}

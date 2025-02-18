@@ -4,43 +4,20 @@ import Tesla from "@/assets/tesla.png";
 
 function HeroComponent() {
   return (
-    <section
-      className={cn(
-        "h-[50vh]",
-        "flex",
-        "flex-col",
-        "items-center",
-        "bg-cover",
-        "bg-center",
-        "bg-no-repeat",
-        "rounded",
-        "overflow-hidden",
-        "rounded-2xl",
-      )}
-      style={{ backgroundImage: `url(${Tesla})` }}
+    <div
+      className="bg-cover bg-center bg-no-repeat min-h-[400px] rounded-2xl flex flex-col items-center justify-center shadow"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5)),url(${Tesla})`,
+      }}
     >
-      <div
-        className={cn(
-          "flex-1",
-          "flex",
-          "justify-center",
-          "items-center",
-          "text-center",
-          "text-white",
-          "p-4"
-        )}
-      >
-        <div>
-          <h1 className={cn("text-7xl", "font-bold", "mb-4")}>
-            Win a Tesla for a $100
-          </h1>
-          <p className={cn("text-lg", "font-light")}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            venenatis cursus bibendum
-          </p>
-        </div>
-      </div>
-    </section>
+      <h1 className="font-bold text-7xl text-white drop-shadow">
+        Win a Tesla for a $100!
+      </h1>
+      <h4 className="font-medium text-xl text-white drop-shadow">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        venenatis cursus bibendum. 
+      </h4>
+    </div>
   );
 }
 

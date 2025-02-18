@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ChooseRole from './components/ChooseRole';
-import SignupForm from './components/SignupForm';
+import SignupForm from './components/SignupFormDialog';
 
 export default function SignupPage() {
   const [step, setStep] = useState('choose-role');

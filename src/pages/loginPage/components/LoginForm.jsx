@@ -18,6 +18,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import googleIcon from "@/assets/google-icon.png";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const emailSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -52,14 +59,17 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="rounded-xl shadow-lg border">
-      <Card className="w-[400px] rounded-t-xl rounded-b-none p-4 shadow-none border-none">
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline">Sign In</Button>
+      </DialogTrigger>
+      <DialogContent className="max-w-[400px]">
+        <DialogHeader>
+          <DialogTitle>Sign in to Homybid</DialogTitle>
+        </DialogHeader>
         <div className="space-y-3">
           <div className="flex flex-col items-center space-y-3">
             <div className="w-12 h-12 bg-gray-100 rounded-xl" />
-            <h1 className="text-xl text-zinc-800 font-semibold">
-              Sign in to Homybid
-            </h1>
             <p className="text-sm text-gray-500">
               Welcome! Please fill in the details to get started.
             </p>
@@ -191,15 +201,15 @@ export default function LoginForm() {
             </Form>
           )}
         </div>
-      </Card>
-      <div className={"bg-gray-100 rounded-b-xl p-3"}>
-        <p className="text-center text-xs text-gray-500">
-          Don't have an account?{" "}
-          <a href="/signup" className="text-[#14162E] hover:underline">
-            Sign up
-          </a>
-        </p>
-      </div>
-    </div>
+        <div className={"bg-gray-100 rounded-b-xl p-3"}>
+          <p className="text-center text-xs text-gray-500">
+            Don't have an account?{" "}
+            <a href="/signup" className="text-[#14162E] hover:underline">
+              Sign up
+            </a>
+          </p>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }
