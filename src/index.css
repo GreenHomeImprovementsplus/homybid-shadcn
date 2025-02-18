@@ -42,7 +42,7 @@ h1 {
 }
 
 button {
-  border-radius: 100px !important;
+  /* border-radius: 100px !important; */
   border: 1px solid transparent;
   font-size: 1em;
   font-weight: 500;
