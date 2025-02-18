@@ -7,6 +7,10 @@ export const homeImprovementItems = [
   'Bathrooms',
 ];
 
+export const homeStores = [
+  'Matresses',
+];
+
 export const filterOptions = [
   { value: 'initial', label: 'Initial Bidding' },
   { value: 'active', label: 'Bidding Now' },
